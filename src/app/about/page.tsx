@@ -1,13 +1,19 @@
-// /pages/about.js
+// /pages/about.tsx
 "use client";
 
+import { ReactNode } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Footer from "@/components/Footer";
 import Menu from "@/components/Menu";
 
 // Custom ListItem component
-function ListItem({ title, children }) {
+type ListItemProps = {
+  title: string;
+  children: ReactNode;
+};
+
+function ListItem({ title, children }: ListItemProps) {
   return (
     <div className="py-4">
       <dt className="text-sm font-medium text-gray-500">{title}</dt>
@@ -49,7 +55,6 @@ export default function About() {
                 </ListItem>
               </dl>
             </CardContent>
-
           </Card>
         </main>
 
