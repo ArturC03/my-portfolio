@@ -1,6 +1,7 @@
 import { Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TbBrandBluesky as BlueskyLogo } from "react-icons/tb";
+import Link from "next/link";
 
 export default function Footer() {
   const github = "https://github.com/ArturC03";
@@ -14,32 +15,20 @@ export default function Footer() {
           © {new Date().getFullYear()} Artur Cruz. All rights reserved.
         </p>
         <div className="flex gap-4">
-          <Button variant="ghost" size="icon" asChild>
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <Button variant="ghost" size="icon">
+            <Link href={github} target="_blank">
               <Github className="h-5 w-5" />
-            </a>
+            </Link>
           </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <a
-              href={linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <Button variant="ghost" size="icon">
+            <Link href={linkedin} target="_blank">
               <Linkedin className="h-5 w-5" />
-            </a>
+            </Link>
           </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <a
-              href={bluesky}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <Button variant="ghost" size="icon">
+            <Link href={bluesky} target="_blank">
               <BlueskyLogo className="h-5 w-5" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

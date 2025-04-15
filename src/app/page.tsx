@@ -24,7 +24,7 @@ export default function Home() {
           {/* Hero Section with Technologies */}
           <Card className="w-full max-w-2xl sm:w-screen">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-bold">Hello, I'm Artur</CardTitle>
+              <CardTitle className="text-3xl font-bold">Hello, I&apos;m Artur</CardTitle>
               <p className="text-muted-foreground text-lg">
                 A 17-year-old developer passionate about modern web and
                 low-level development.
@@ -36,7 +36,7 @@ export default function Home() {
                 Technologies I Use
               </h2>
               <div className="flex justify-center gap-8">
-                {technologies.map(({ icon, name }, index) => (
+                {technologies.map(({ icon }, index) => (
                   <div key={index} className="flex flex-col items-center">
                     <div className="transition duration-300 ease-in-out hover:scale-110">
                       {icon}
