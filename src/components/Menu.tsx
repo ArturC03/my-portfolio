@@ -7,7 +7,14 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-const NavItem = ({ href, icon: Icon, label, isActive }) => {
+type NavItemProps = {
+  href: string;
+  icon: React.ElementType;
+  label: string;
+  isActive: boolean;
+};
+
+const NavItem = ({ href, icon: Icon, label, isActive }: NavItemProps) => {
   return (
     <Button
       variant={isActive ? "secondary" : "link"}
@@ -25,7 +32,11 @@ const NavItem = ({ href, icon: Icon, label, isActive }) => {
   );
 };
 
-const NavigationItems = ({ currentPath }) => (
+interface NavigationItemsProps {
+  currentPath: string;
+}
+
+const NavigationItems = ({ currentPath }: NavigationItemsProps) => (
   <div className="space-y-1 py-2">
     {[
       { href: "/", label: "Home", icon: Home },
