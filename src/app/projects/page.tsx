@@ -16,7 +16,7 @@ import Link from "next/link";
 import { FaPhp, FaLaravel } from "react-icons/fa";
 import { SiGo, SiNextdotjs } from "react-icons/si";
 
-const ICONS = {
+const ICONS: Record<string, React.ReactNode> = {
   php: <FaPhp size={20} />,
   laravel: <FaLaravel size={20} />,
   go: <SiGo size={20} />,
