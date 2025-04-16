@@ -22,31 +22,32 @@ export default function Home() {
       <div className="flex-1 ml-0 md:ml-64 flex flex-col">
         <main className="flex-1 flex flex-col items-center justify-center p-8">
           {/* Hero Section with Technologies */}
-          <Card className="w-full max-w-2xl sm:w-screen">
+          <Card className="w-full max-w-2xl sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-bold">Hello, I&apos;m Artur</CardTitle>
-              <p className="text-muted-foreground text-lg">
-                A 17-year-old developer passionate about modern web and
-                low-level development.
+              <CardTitle className="text-2xl sm:text-3xl font-bold">
+                Hello, I&apos;m Artur
+              </CardTitle>
+              <p className="text-muted-foreground text-base sm:text-lg">
+                A 17-year-old developer passionate about modern web and low-level development.
               </p>
             </CardHeader>
             <CardContent className="flex flex-col items-center gap-4">
               {/* Technologies Section */}
-              <h2 className="text-2xl font-semibold mb-2 text-center">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-center">
                 Technologies I Use
               </h2>
-              <div className="flex justify-center gap-8">
+              <div className="flex justify-center gap-6 sm:gap-8 flex-wrap">
                 {technologies.map(({ icon }, index) => (
                   <div key={index} className="flex flex-col items-center">
-                    <div className="transition duration-300 ease-in-out hover:scale-110">
-                      {icon}
+                    <div className="w-10 sm:w-12 md:w-14 lg:w-16 transition duration-300 ease-in-out hover:scale-110">
+                      <div className="w-full h-auto">{icon}</div>
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* Buttons */}
-              <div className="flex justify-center gap-4 mt-4">
+              <div className="flex flex-wrap justify-center gap-4 mt-4">
                 <Link href="/projects">
                   <Button size="lg">View My Projects</Button>
                 </Link>
